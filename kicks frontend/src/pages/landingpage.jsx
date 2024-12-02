@@ -1,45 +1,53 @@
-import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
 import React from "react";
+import { Button } from "@/components/ui/button";
+import Card from "@/component/card";
+import Navigationbar from "@/component/navigationbar";
 
 const Landingpage = () => {
   return (
     <div className="bg-stone-200">
       <div className=" mx-5 py-3">
-        <div className=" mt-2 rounded-lg bg-white relative overflow-hidden w-full h-14   px-4  inline-flex ">
-          <div className="pl-4 text-2xl font-medium ">Home</div>
-          <div className="mx-auto">
-            <img src="../asset/Group.png" className=" mt-2 ml-1 h-6 w-20"></img>
-          </div>
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search ..."
-              className="bg-stone-200 text-black placeholder-gray-400 rounded-lg mt-2 pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              //   value={searchTerm}
-              //   onChange={handleSearch}
-            />
-            <Search
-              className=" absolute left-3 top-2.5  text-gray-400 "
-              size={18}
-            />
-          </div>
-        </div>
+        <Navigationbar />
       </div>
-      <div className="mt-10 text-9xl font-extrabold mx-80 mb-28 gap-2 ">
+
+      <div className="mt-10 text-center  mx-auto mb-28 gap-2 text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-extrabold">
         <span className="text-slate-800">DO IT</span>
-        <span className="text-cyan-500 "> RIGHT</span>
+        <span className="text-cyan-500"> RIGHT</span>
       </div>
-      <div className=" mt-5 mb-2 relative  rounded-lg shadow-lg overflow-hidden w-5/6 h-auto mx-auto">
-        <div className="relative">
+
+      <div
+        className=" mt-5 mb-2 relative  rounded-lg shadow-lg overflow-hidden h-auto ml-16 mr-5"
+      >
+        <div className="relative w-full ">
           <img
             src="../asset/image 14.png"
             alt="Nike Air Max"
             className="w-full h-full object-cover"
           />
-          <Button className="mt-5 bg-b bg-lime-800 ">button</Button>
+          <div className="absolute top-5 left-5    flex justify-center items-center mt-5 mx-5">
+            <div className="bg-stone-900 text-white text-sxl font-semibold inline-flex object-cover h-auto px-4 py-2 rounded-xl shadow-lg overflow-hidden ">
+              <span>product of the month</span>
+            </div>
+          </div>
+          <div className="mb-40 absolute bottom-10 left-10 text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-medium ">
+            <span className="text-white">nike air</span>
+            <span className="text-white"> max</span>
+            <br />
+            <span className="text-white text-2xl font-medium leading-snug">
+              Nike introducing the new air max for <br />
+              everyone's comfort
+            </span>
+          </div>
+          <Button className=" absolute bottom-10 left-10 mt-5 bg-[#4A69E2] px-10 py-4 h-auto text-xl font-medium ">
+            buy now
+          </Button>
         </div>
       </div>
+
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 };
