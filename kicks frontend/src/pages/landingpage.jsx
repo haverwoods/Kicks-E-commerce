@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Card from "@/component/card";
 import Navigationbar from "@/component/navigationbar";
 import { useNavigate } from "react-router-dom";
+import Reviews from "@/component/reviews";
 
 const Landingpage = () => {
   const navigate = useNavigate;
@@ -46,24 +47,50 @@ const Landingpage = () => {
           </Button>
         </div>
       </div>
-
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-
-      <div
-        className="relative mt-5 h-auto w-auto bg-stone-900  text-white"
-      >
-        <span className=" ml-5 text-white font-semibold mt-5  text-3xl">CATEGORIES</span>
-       <div className="inline-flex mt-5 mb-5 ml-14 h-2 ">
-      <div className="">
-        <img src="../asset/image 31.png" className="px-5 bg-[#ECEEF0] object-cover w-full rounded-tl-3xl  overflow-hidden"/>
+      <div className=" inline-block ">
+        <span className=" ml-5 text-black font-semibold mt-5  text-3xl">
+          Don't miss out new drops
+        </span>
+        <div>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
-      <div className="">
-        <img src="../asset/image 32.png" className="px-5 bg-[#F6F6F6] object-cover w-full overflow-hidden"/>
+      {/* catagories section */}
+      <div className="static mt-5 h-auto  bg-stone-900  text-white  ">
+        <span className=" ml-5 text-white font-semibold mt-5  text-3xl">
+          CATEGORIES
+        </span>
+        <div className="flex justify-center  py-10 ml-10">
+          <div className="">
+            <img
+              src="../asset/image 31.png"
+              className="px-5 bg-[#ECEEF0] object-cover w-full rounded-tl-3xl  overflow-hidden"
+            />
+          </div>
+          <div className="">
+            <img
+              src="../asset/image 32.png"
+              className="px-5 bg-[#F6F6F6] object-cover w-full overflow-hidden"
+            />
+          </div>
+        </div>
       </div>
-        </div> 
+      {/* review section */}
+      <div className="inline-block">
+      
+          <span className=" ml-5 text-black font-semibold mt-5  text-3xl">
+            Reviews
+          </span>
+          <div>
+
+          <Reviews />
+          <Reviews />
+          <Reviews />
+         
+        </div>
       </div>
     </div>
   );
