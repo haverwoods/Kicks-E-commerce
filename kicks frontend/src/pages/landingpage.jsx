@@ -5,6 +5,8 @@ import Navigationbar from "@/component/navigationbar";
 import { useNavigate } from "react-router-dom";
 import Reviews from "@/component/reviews";
 
+import Footer from "@/component/footer";
+
 const Landingpage = () => {
   const navigate = useNavigate;
   const order = () => {
@@ -80,18 +82,19 @@ const Landingpage = () => {
       </div>
       {/* review section */}
       <div className="inline-block">
-      
-          <span className=" ml-5 text-black font-semibold mt-5  text-3xl">
-            Reviews
-          </span>
-          <div>
-
+        <span className=" ml-5 text-black font-semibold mt-5  text-3xl">
+          Reviews
+        </span>
+        <div>
           <Reviews />
           <Reviews />
           <Reviews />
-         
+          <Reviews />
         </div>
       </div>
+        {/* footer section */}
+     <Footer/>
+      <div></div>
     </div>
   );
 };
