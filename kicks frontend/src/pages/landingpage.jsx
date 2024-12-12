@@ -1,17 +1,18 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import Card from "@/component/card";
-import Navigationbar from "@/component/navigationbar";
+import Card from "@/component/card/card";
+import Navigationbar from "@/component/navbar/navigationbar";
 import { useNavigate } from "react-router-dom";
-import Reviews from "@/component/reviews";
+import Reviews from "@/component/reviews/reviews";
 
-import Footer from "@/component/footer";
+import Footer from "@/component/footer/footer";
 
 const Landingpage = () => {
   const navigate = useNavigate;
   const order = () => {
     navigate("/kicks frontend/src/component/card.jsx");
   };
+  
   return (
     <div className="bg-stone-200">
       <div className=" mx-5 py-3">
