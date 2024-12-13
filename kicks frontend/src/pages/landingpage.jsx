@@ -37,13 +37,13 @@ const Landingpage = () => {
             </div>
           </div>
           <div className="mb-40 absolute bottom-10 left-10 text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-medium ">
-            <span className="text-white">nike air</span>
+            <span className="text-white">Nike air</span>
             <span className="text-white"> max</span>
             <br />
-            <span className="text-white text-2xl font-medium leading-snug">
-              Nike introducing the new air max for <br />
-              everyone's comfort
-            </span>
+            <p className="mt-5 text-white text-2xl font-medium ">
+              Nike introducing the new air max for<br/> everyone's comfort
+             
+            </p>
           </div>
           <Button className=" absolute bottom-10 left-10 mt-5 bg-[#4A69E2] px-10 py-4 h-auto text-xl font-medium ">
             buy now

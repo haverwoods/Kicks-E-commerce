@@ -13,7 +13,7 @@ const NavLinks = () => {
           {/* Main clickable heading */}
           <div className="px-3 text-left md:cursor-pointer group">
             <h1
-              className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
+              className=" flex justify-between items-center md:pr-0 pr-5 group"
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
                 setSubHeading("");
@@ -31,9 +31,9 @@ const NavLinks = () => {
             {/* Show submenu if available */}
             {link.submenu && (
               <div>
-                <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
+                <div className=" absolute top-full left-1/2 transform -translate-x-1/2 w-full max-w-screen-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50 transition-all duration-300">
                   <div className="bg-white p-8 w-full shadow-lg">
-                    <div className="grid grid-cols-4 gap-8">
+                    <div className="grid grid-cols-6 gap-8">
                       {/* sublinks */}
                       {link.sublinks.map((mysublinks) => (
                         <div key={mysublinks.Head}>
