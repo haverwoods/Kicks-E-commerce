@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./links";
+import { Menu } from "lucide-react";
 
 const NavLinks = () => {
   const [heading, setHeading] = useState("");
@@ -19,13 +20,17 @@ const NavLinks = () => {
                 setSubHeading("");
               }}
             >
+              
               {link.name}
               {/* Show chevron icon to indicate open/close */}
-              {/* <span className="text-xl md:hidden inline">
-               <ion-icon
+              <span className="text-xl md:hidden inline">
+               <Menu
                  name={heading === link.name ? "chevron-up" : "chevron-down"}
-               ></ion-icon>
-             </span> */}
+               ></Menu>
+               {/* <ion-icon
+                 name={heading === link.name ? "chevron-up" : "chevron-down"}
+               ></ion-icon> */}
+             </span>
             </h1>
 
             {/* Show submenu if available */}

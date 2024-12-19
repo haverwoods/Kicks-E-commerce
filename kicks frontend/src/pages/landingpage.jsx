@@ -12,7 +12,7 @@ const Landingpage = () => {
   const order = () => {
     navigate("/kicks frontend/src/component/card.jsx");
   };
-  
+
   return (
     <div className="bg-stone-200">
       <div className=" mx-5 py-3">
@@ -24,28 +24,28 @@ const Landingpage = () => {
         <span className="text-cyan-500"> RIGHT</span>
       </div>
 
-      <div className=" mt-5 mb-2 relative  rounded-lg shadow-lg overflow-hidden h-auto ml-16 mr-5">
+      <div className=" mt-5 mb-2 relative  rounded-lg shadow-lg overflow-hidden h-auto ml-5 mr-5">
         <div className="relative w-full ">
           <img
             src="../asset/image 14.png"
             alt="Nike Air Max"
-            className="w-full h-full object-cover"
+            className="w-full  h-full object-cover "
           />
           <div className="absolute top-5 left-5    flex justify-center items-center mt-5 mx-5">
-            <div className="bg-stone-900 text-white text-sxl font-semibold inline-flex object-cover h-auto px-4 py-2 rounded-xl shadow-lg overflow-hidden ">
+            <div className="bg-stone-900 text-white text-sxl font-semibold inline-flex object-cover sm:h-10 md:h-14 lg:h-auto sm:w-20 md:w-32 lg:w-auto px-4 py-2 rounded-xl shadow-lg overflow-hidden ">
               <span>product of the month</span>
             </div>
           </div>
-          <div className="mb-40 absolute bottom-10 left-10 text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-medium ">
+          <div className=" absolute bottom-10 sm:top-2 md:top-28 lg:top-10 xl:top-20 left-10  sm:text-2xl  md:text-4xl lg:text-6xl   xl:text-9xl font-medium ">
             <span className="text-white">Nike air</span>
             <span className="text-white"> max</span>
             <br />
-            <p className="mt-5 text-white text-2xl font-medium ">
-              Nike introducing the new air max for<br/> everyone's comfort
-             
+            <p className="mt-5 text-white  font-medium ">
+              Nike introducing the new air max for
+              <br /> everyone's comfort
             </p>
           </div>
-          <Button className=" absolute bottom-10 left-10 mt-5 bg-[#4A69E2] px-10 py-4 h-auto text-xl font-medium ">
+          <Button className=" absolute bottom-10 left-10 mt-5 bg-[#4A69E2] px-10 py-4 sm:h-10 md:h-14 lg:h-auto  sm:w-10 md:w-14 lg:w-auto text-xl font-medium ">
             buy now
           </Button>
         </div>
@@ -93,8 +93,8 @@ const Landingpage = () => {
           <Reviews />
         </div>
       </div>
-        {/* footer section */}
-     <Footer/>
+      {/* footer section */}
+      <Footer />
       <div></div>
     </div>
   );
