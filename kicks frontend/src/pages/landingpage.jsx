@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Card from "@/component/card/card";
 import Navigationbar from "@/component/navbar/navigationbar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Reviews from "@/component/reviews/reviews";
 
 import Footer from "@/component/footer/footer";
@@ -14,12 +14,10 @@ const Landingpage = () => {
   };
 
   return (
-    <div className="bg-stone-200">
-      <div className=" mx-5 py-3">
-        <Navigationbar />
-      </div>
+    <div className="">
+      <Navigationbar />
 
-      <div className="mt-10 text-center  mx-auto mb-28 gap-2 text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-extrabold">
+      <div className="mt-10 text-center  mx-auto  gap-2 text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-extrabold">
         <span className="text-slate-800">DO IT</span>
         <span className="text-cyan-500"> RIGHT</span>
       </div>
@@ -36,11 +34,11 @@ const Landingpage = () => {
               <span>product of the month</span>
             </div>
           </div>
-          <div className=" absolute bottom-10 sm:top-2 md:top-28 lg:top-10 xl:top-20 left-10  sm:text-2xl  md:text-4xl lg:text-6xl   xl:text-9xl font-medium ">
+          <div className=" absolute bottom-10 sm:top-2 md:top-28 lg:top-10 xl:top-20 left-10  sm:text-2xl  md:text-4xl lg:text-6xl xl:text-9xl font-medium ">
             <span className="text-white">Nike air</span>
             <span className="text-white"> max</span>
             <br />
-            <p className="mt-5 text-white  font-medium ">
+            <p className="mt-5bsm:text-2xl md:text-4xl lg:text-6xl xl:text-6xl text-white  font-normal ">
               Nike introducing the new air max for
               <br /> everyone's comfort
             </p>
@@ -55,10 +53,12 @@ const Landingpage = () => {
           Don't miss out new drops
         </span>
         <div>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Link to="/listingpage">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </Link>
         </div>
       </div>
       {/* catagories section */}
