@@ -48,15 +48,37 @@ const Landingpage = () => {
           </Button>
         </div>
       </div>
-      <div className=" inline-block ">
+      {/* <div className=" ml-5 mr-5">
         <span className=" ml-5 text-black font-semibold mt-5  text-3xl">
           Don't miss out new drops
         </span>
-        <div>
+        <div className="inline-flex">
           <Link to="/listingpage">
             <Card />
             <Card />
             <Card />
+            <Card />
+          </Link>
+        </div>
+      </div> */}
+      <div className="ml-2 inline-block">
+        <p className=" ml-5 text-black font-semibold mt-5  text-3xl">
+          Don't miss out new drops
+        </p>
+        <div className="inline-grid grid-cols-5 gap-3">
+          <Link to="/listingpage">
+            <Card />
+          </Link>
+          <Link to="/listingpage">
+            <Card />
+          </Link>
+          <Link to="/listingpage">
+            <Card />
+          </Link>
+          <Link to="/listingpage">
+            <Card />
+          </Link>
+          <Link to="/listingpage">
             <Card />
           </Link>
         </div>
