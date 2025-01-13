@@ -15,14 +15,14 @@ const Listingpage = () => {
         <img
           src="../asset/banner.png"
           alt="banner"
-          className=" max-w-full max-h-full object-cover pl-20 pr-20"
+          className=" max-w-full max-h-full object-cover "
         />
       </div>
         <div className="flex py-10">
         <Sidebar/>
   
-      <div>
-      <div className="  ml-10 my-10 inline-grid grid-cols-4 gap-2">
+      <div class="products">
+      <div className="  ml-10 my-10 inline-grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 ">
         <Card/>
         <Card/>
         <Card/>
