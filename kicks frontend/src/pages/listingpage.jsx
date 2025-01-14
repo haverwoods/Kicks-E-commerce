@@ -7,39 +7,37 @@ import React from "react";
 const Listingpage = () => {
   return (
     <div>
-        <Navigationbar/>
-        <div
-        alt="banner"
-        className="relative mt-20 mb-5 ml-10 mr-10  rounded-3xl"
-      >
-        <img
-          src="../asset/banner.png"
-          alt="banner"
-          className=" max-w-full max-h-full object-cover "
-        />
-      </div>
-        <div className="flex py-10">
-        <Sidebar/>
-  
-      <div class="products">
-      <div className="  ml-10 my-10 inline-grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 ">
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-      </div>
-        
-      </div>
+      <Navigationbar />
+      <div className="flex overflow-hidden">
+        <div className="hidden lg:flex">
+          <Sidebar />
         </div>
-      <Footer/>
+        <div className="flex-1">
+          <div className="relative mt-5 mb-5 ml-auto lg:mx-10 rounded-3xl">
+            <img
+              src="../asset/banner.png"
+              alt="banner"
+              className="w-8/12 h-full object-cover rounded-3xl"
+            />
+          </div>
+          <div className="mx-5 my-10  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };

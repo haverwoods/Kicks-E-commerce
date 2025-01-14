@@ -4,7 +4,7 @@ import React from "react";
 const Sidebar = () => {
   return (
     <div>
-      <div className=" w-60 h-screen px-5 py-5 ">
+      <div className=" w-60 h-screen px-5 py-5 mt-0 ">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
           molestiae rerum vero cumque earum placeat voluptates ex sit quis in
@@ -12,19 +12,7 @@ const Sidebar = () => {
           aliquam.
         </p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-          molestiae rerum vero cumque earum placeat voluptates ex sit quis in
-          illum eius minus labore quidem, nisi laudantium vitae obcaecati
-          aliquam.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-          molestiae rerum vero cumque earum placeat voluptates ex sit quis in
-          illum eius minus labore quidem, nisi laudantium vitae obcaecati
-          aliquam.
-        </p>
+   
         <div class="sizes" className="mt-6">
           <p className="text-xl font-normal">sizes</p>
           <div className="inline-grid grid-cols-2 gap-x-20 gap-y-5 ">
