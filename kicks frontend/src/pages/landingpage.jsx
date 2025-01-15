@@ -9,9 +9,11 @@ import Footer from "@/component/footer/footer";
 
 const Landingpage = () => {
   const navigate = useNavigate;
-  const order = () => {
-    navigate("/kicks frontend/src/component/card.jsx");
-  };
+  // const order = () => {
+  //   navigate("/kicks frontend/src/component/card.jsx");
+  // };
+  const number = Array.from({ length: 5 });
+  const num = Array.from({length: 3})
 
   return (
     <div className="">
@@ -48,39 +50,17 @@ const Landingpage = () => {
           </Button>
         </div>
       </div>
-      {/* <div className=" ml-5 mr-5">
-        <span className=" ml-5 text-black font-semibold mt-5  text-3xl">
-          Don't miss out new drops
-        </span>
-        <div className="inline-flex">
-          <Link to="/listingpage">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </Link>
-        </div>
-      </div> */}
+      {/* new drops section */}
       <div className="ml-2 inline-block">
         <p className=" ml-5 text-black font-semibold mt-5  text-3xl">
           Don't miss out new drops
         </p>
-        <div className="inline-grid grid-cols-5 gap-3">
-          <Link to="/listingpage">
-            <Card />
-          </Link>
-          <Link to="/listingpage">
-            <Card />
-          </Link>
-          <Link to="/listingpage">
-            <Card />
-          </Link>
-          <Link to="/listingpage">
-            <Card />
-          </Link>
-          <Link to="/listingpage">
-            <Card />
-          </Link>
+        <div className="inline-grid  grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1">
+          {number.map((item) => (
+            <Link to="/listingpage" key={item}>
+              <Card item={item} />
+            </Link>
+          ))}
         </div>
       </div>
       {/* catagories section */}
@@ -109,10 +89,12 @@ const Landingpage = () => {
           Reviews
         </span>
         <div>
-          <Reviews />
-          <Reviews />
-          <Reviews />
-          <Reviews />
+          {
+            num.map((item) =>(
+              <Reviews/>
+            ))
+          }
+          
         </div>
       </div>
       {/* footer section */}
