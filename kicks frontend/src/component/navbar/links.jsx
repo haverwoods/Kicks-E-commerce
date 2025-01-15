@@ -6,7 +6,7 @@ export const links = [
       {
         Head: "New & Trending",
         sublink: [
-          { name: "New Arrivals", link: "/" },
+          { name: "New Arrivals", link: "/landingpage" },
           { name: "Best Sellers", link: "/" },
           { name: "Members Exclusives", link: "/" },
           { name: "Unwrap the Hype: Shop Premium", link: "/" },

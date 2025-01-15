@@ -20,20 +20,16 @@ const NavLinks = () => {
                 setSubHeading("");
               }}
             >
-              
               {link.name}
               {/* Show chevron icon to indicate open/close */}
               <span className="text-xl md:hidden inline">
-               <Menu
-                 name={heading === link.name ? "chevron-up" : "chevron-down"}
-               ></Menu>
-               {/* <ion-icon
-                 name={heading === link.name ? "chevron-up" : "chevron-down"}
-               ></ion-icon> */}
-             </span>
+                <Menu
+                  name={heading === link.name ? "chevron-up" : "chevron-down"}
+                ></Menu>
+              </span>
             </h1>
 
-            {/* Show submenu if available */}
+            {/* submenu if available */}
             {link.submenu && (
               <div>
                 <div className=" absolute top-full left-1/2 transform -translate-x-1/2 w-full max-w-screen-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50 transition-all duration-300">
