@@ -23,6 +23,28 @@ export const sidebarLinks = [
     ],
   },
   {
+    name:"color",
+    submenu: true,
+    sublinks: [
+      { name: "Black", link: "/" },
+      { name: "Brown", link: "/" },
+      { name: "White", link: "/" },
+      { name: "Blue", link: "/" },
+      { name: "Grey", link: "/" },
+      { name: "Green", link: "/" },
+      { name: "Red", link: "/" },
+      { name: "Pink", link: "/" },
+      { name: "Ivory", link: "/" },
+      { name: "Multi Color", link: "/" },
+      { name: "Purple", link: "/" },
+      { name: "Yellow", link: "/" },
+      { name: "Orange", link: "/" },
+      { name: "Nude", link: "/" },
+      { name: "Silver", link: "/" },
+      { name: "Gold", link: "/" }
+  ],
+  },
+  {
     name: "Style",
     submenu: true,
     sublinks: [

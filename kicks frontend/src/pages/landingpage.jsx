@@ -60,7 +60,7 @@ const Landingpage = () => {
             <Link to="/listingpage" key={item}>
               <Card item={item} />
             </Link>
-          ))}
+          ))} 
         </div>
       </div>
       {/* catagories section */}
