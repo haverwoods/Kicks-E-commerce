@@ -1,10 +1,15 @@
 import { Button } from "@/components/ui/button";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "../navbar/links";
 import { sidebarLinks } from "./data";
+import { Plus } from "lucide-react";
 
 const Sidebar = () => {
+  const [isVisible, setisVisible] = useState(false);
+  const Visible = () => {
+    setisVisible(!isVisible);
+  };
   return (
     <div className="sticky top-20 overflow-y-auto">
       <div className=" w-60 h-screen px-5 py-5 mt-0 ">
@@ -15,47 +20,42 @@ const Sidebar = () => {
             {sidebarLinks.map((link) => (
               <div key={link.name}>
                 {/* //name of heading */}
-                <p
-                  key={link.name}
-                  variant="outline"
-                  className="text-xl font-medium px-5 my-5"
-                  size="icon"
-                >
-                  {link.name}
-                </p>
-                {/* //name of subheading */}
-                <div className=" ">
-                  <div className="inline-grid grid-cols-1 gap-x-5 gap-y-5 md:cursor-pointer ">
-                    {link.sublinks.map((sub) => (
-                      <div key={sub.name} className="flex items-center">
-                        <div className="flex items-center">
-                          <input
-                            type="checkbox"
-                            id={sub.name}
-                            className="peer hidden"
-                          />
-                          <label
-                            htmlFor={sub.name}
-                            className="w-5 h-5 bg-gray-200 border border-gray-300 rounded-sm flex items-center justify-center peer-checked:bg-black peer-checked:border-black peer-checked:text-white text-transparent"
-                          >
-                            ✓
-                          </label>
-                          <span className="ml-2">{sub.name}</span>
-                        </div>
-                      </div>
-
-                      // <Button
-                      //   key={sub.name}
-                      //   variant="outline"
-                      //   className="hover:bg-black hover:text-white  px-1 py-3 w-fit "
-                      //   size="icon"
-                      // >
-                      //   {sub.name}
-                      // </Button>
-                    ))}
-               
-                  </div>
+                <div className="flex items-center justify-between">
+                  <p
+                    key={link.name}
+                    variant="outline"
+                    className="text-xl font-medium px-5 my-5"
+                    size="icon"
+                  >
+                    {link.name}
+                  </p>
+                  <Plus onClick={Visible} />
                 </div>
+                {/* //list of subheading */}
+                {isVisible && (
+                  <div className=" ">
+                    <div className="inline-grid grid-cols-1 gap-x-5 gap-y-5 md:cursor-pointer ">
+                      {link.sublinks.map((sub) => (
+                        <div key={sub.name} className="flex items-center">
+                          <div className="flex items-center">
+                            <input
+                              type="checkbox"
+                              id={sub.name}
+                              className="peer hidden"
+                            />
+                            <label
+                              htmlFor={sub.name}
+                              className="w-5 h-5 bg-gray-200 border border-gray-300 rounded-sm flex items-center justify-center peer-checked:bg-black peer-checked:border-black peer-checked:text-white text-transparent"
+                            >
+                              ✓
+                            </label>
+                            <span className="ml-2">{sub.name}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
