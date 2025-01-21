@@ -6,15 +6,23 @@ import { sidebarLinks } from "./data";
 import { Plus } from "lucide-react";
 
 const Sidebar = () => {
-  const [isVisible, setisVisible] = useState(false);
-  const Visible = () => {
-    setisVisible(!isVisible);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = (name) => {
+    setIsVisible((prevState) => ({
+      ...prevState,
+      [name]: !prevState[name], // Toggle visibility for the specific link
+    }));
+  };
+
+  const  getSubLinkCount = (sublinks) => {
+    //check is sublink esits if yes then return the length of sublink or else 0
+    return sublinks ? sublinks.length : 0;
   };
   return (
     <div className="sticky top-20 overflow-y-auto">
       <div className=" w-60 h-screen px-5 py-5 mt-0 ">
         <div className="mt-6">
-          <p className="text-xl font-normal">sizes</p>
           <div className=" ">
             {/* {Link.map()} */}
             {sidebarLinks.map((link) => (
@@ -24,17 +32,24 @@ const Sidebar = () => {
                   <p
                     key={link.name}
                     variant="outline"
-                    className="text-xl font-medium px-5 my-5"
+                    className="text-sm font-sans px-5 my-5"
                     size="icon"
                   >
                     {link.name}
                   </p>
-                  <Plus onClick={Visible} />
+                  <Plus onClick={() => toggleVisibility(link.name)} />
                 </div>
                 {/* //list of subheading */}
-                {isVisible && (
+                {isVisible[link.name] && (
                   <div className=" ">
-                    <div className="inline-grid grid-cols-1 gap-x-5 gap-y-5 md:cursor-pointer ">
+                    {/* <div className="inline-grid grid-cols-1 gap-x-5 gap-y-5 md:cursor-pointer "> */}
+                    <div
+                      className={`inline-grid ${
+                        getSubLinkCount(link.sublinks) > 8
+                          ? "grid-cols-2"
+                          : "grid-cols-1"
+                      } gap-x-5 gap-y-5 ml-5 md:cursor-pointer text-sm font-sans`}
+                    >
                       {link.sublinks.map((sub) => (
                         <div key={sub.name} className="flex items-center">
                           <div className="flex items-center">
