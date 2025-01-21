@@ -13,7 +13,7 @@ const Landingpage = () => {
   //   navigate("/kicks frontend/src/component/card.jsx");
   // };
   const number = Array.from({ length: 5 });
-  const num = Array.from({length: 3})
+  const num = Array.from({ length: 3 });
 
   return (
     <div className="">
@@ -58,9 +58,14 @@ const Landingpage = () => {
         <div className="inline-grid  grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1">
           {number.map((item) => (
             <Link to="/listingpage" key={item}>
-              <Card item={item} />
+              <Card
+                imagesrc="https://cdn.shopify.com/s/files/1/0293/9277/files/12-23-24_S2_48_KJGT4102308_Charcoal_CXB_RL_16-07-31_26994_PXF.jpg?v=1735323750&width=400&height=599&crop=center"
+                texts="Originals Sweatshirt"
+                price="$150"
+                item={item}
+              />
             </Link>
-          ))} 
+          ))}
         </div>
       </div>
       {/* catagories section */}
@@ -89,12 +94,9 @@ const Landingpage = () => {
           Reviews
         </span>
         <div>
-          {
-            num.map((item) =>(
-              <Reviews/>
-            ))
-          }
-          
+          {num.map((item) => (
+            <Reviews />
+          ))}
         </div>
       </div>
       {/* footer section */}

@@ -42,9 +42,9 @@ const Sidebar = () => {
                 {/* //list of subheading */}
                 {isVisible[link.name] && (
                   <div className=" ">
-                    {/* <div className="inline-grid grid-cols-1 gap-x-5 gap-y-5 md:cursor-pointer "> */}
                     <div
                       className={`inline-grid ${
+                           //check if length of sublink is more than 8 , if yes then send grid cols 2 or else 1
                         getSubLinkCount(link.sublinks) > 8
                           ? "grid-cols-2"
                           : "grid-cols-1"
