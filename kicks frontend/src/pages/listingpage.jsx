@@ -3,6 +3,7 @@ import Footer from "@/component/footer/footer";
 import Navigationbar from "@/component/navbar/navigationbar";
 import Sidebar from "@/component/sidebar/sidebar";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Listingpage = () => {
   const numofcard = Array.from({ length: 16 });
@@ -26,12 +27,14 @@ const Listingpage = () => {
           {/* product card section */}
           <div className="mx-1 my-10  grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             {numofcard.map((item) => (
+              <Link to="/productpage" key={item}>
               <Card
                 imagesrc="https://cdn.shopify.com/s/files/1/0293/9277/files/08-21-24_S2_22_BPLI025F_Stone_ZSR_CXB_RL_14-30-02_3047_BH.jpg?v=1724286406&width=600&height=900&crop=center"
                 texts="Originals Sweatshirt"
                 price="$100"
                 key={item}
               />
+              </Link>
             ))}
           </div>
         </div>

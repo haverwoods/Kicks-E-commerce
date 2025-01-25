@@ -17,6 +17,7 @@ function App() {
       <Route path="/" element={<Landingpage/>}/>
       <Route path="/landingpage" element={<Landingpage/>}/>
       <Route path="/listingpage" element={<Listingpage/>}/>   
+      <Route path="/Productpage" element={<Productpage/>}/>
       <Route path="/sidebar" element={<Sidebar/>}/> 
   </Routes>
     </div>
