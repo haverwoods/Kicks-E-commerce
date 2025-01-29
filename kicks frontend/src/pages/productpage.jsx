@@ -2,6 +2,7 @@ import Navigationbar from "@/component/navbar/navigationbar";
 import Productdescription from "@/component/product/productdescription";
 import Productdetail from "@/component/product/productdetail";
 import Productimage from "@/component/product/productimage";
+import { Carousel } from "@/components/ui/carousel";
 import { Plus } from "lucide-react";
 import React, { useState } from "react";
 
@@ -18,24 +19,20 @@ const Productpage = () => {
   const [selectedImage, setSelectedImage] = useState(images[0]); //use first image as default
   const toggleVisibility = (detail) => {
     console.log("it works");
-    // setIsVisible((prevState) => ({
-    //   ...prevState,
-    //   [detail]: !prevState[detail], // Toggle visibility for the specific link
-    // }));
     setIsVisible((prevState) => !prevState);
   };
   return (
     <div>
       <Navigationbar />
-      <div className="mt-5 mx-28">
-        <div className="flex items-start gap-10 ">
+      <div className="mt-5 mx-2">
+        <div className="flex items-start gap-5 ">
           {/* Left sidebar for small images */}
-
-          <div className=" ml-10 grid grid-cols-2 gap-2 ">
+          {/* //leftsidebar is hidden for mobiel screen and visible for desktop screen */}
+          <div className="ml-10 hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-1">
             {images.map((img, index) => (
               <div
                 key={index}
-                className={`w-20 h-20 border border-gray-300 rounded-lg overflow-hidden cursor-pointer ${
+                className={`w-20 h-20  sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 border border-gray-300 rounded-lg overflow-hidden cursor-pointer ${
                   img === selectedImage ? "border-black" : ""
                 }`}
                 onClick={() => setSelectedImage(img)}
@@ -49,6 +46,7 @@ const Productpage = () => {
             ))}
           </div>
           <Productimage src={selectedImage} />
+          <Carousel images={images} />
           <div className="ml-10">
             <Productdescription
               title="Originals Sweatshirt"
@@ -58,10 +56,10 @@ const Productpage = () => {
 
             <div className="  py-5 px-5">
               <div className="inline-flex gap-x-5">
-                <p  className="text-lg font-sans " size="icon">
+                <p className="text-lg font-sans " size="icon">
                   product detail
                 </p>
-              <Plus onClick={() => toggleVisibility()} />
+                <Plus onClick={() => toggleVisibility()} />
               </div>
               {isVisible && (
                 //make follwing componenet product detail visble when presse click
