@@ -60,7 +60,7 @@ const Productpage = () => {
                     <img
                       src={img}
                       alt={`Product ${index + 1}`}
-                      className="w-full h-[500px] object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))}
@@ -83,14 +83,16 @@ const Productpage = () => {
               ))}
             </div>
           </div>
-        <div className="flex items-start gap-5 ">
+        <div className="flex items-start sm:gap-0 md:gap-5 lg:gap-10 ">
           {/* Left sidebar for small images */}
           {/* //leftsidebar is hidden for mobiel screen and visible for desktop screen */}
-          <div className="ml-10 hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-1">
+          <div className=" ml-10">
+            <div className="grid grid-cols-2 gap-1">
+
             {images.map((img, index) => (
               <div
                 key={index}
-                className={`w-20 h-20  sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 border border-gray-300 rounded-lg overflow-hidden cursor-pointer ${
+                className={`w-20 h-20 hidden md:block md:w-28 md:h-28 lg:w-32 lg:h-32 border border-gray-300 rounded-lg overflow-hidden cursor-pointer ${
                   img === selectedImage ? "border-black" : ""
                 }`}
                 onClick={() => setSelectedImage(img)}
@@ -102,9 +104,13 @@ const Productpage = () => {
                 />
               </div>
             ))}
+            </div>
           </div>
                {/* Right side for main image and product description */}
-          <Productimage src={selectedImage} className="hidden md:block lg:block" />
+               <div className="hidden md:block">
+  <Productimage src={selectedImage} />
+</div>
+          {/* <Productimage src={selectedImage}  /> */}
           <Carousel images={images} />
           <div className="ml-10">
             <Productdescription
