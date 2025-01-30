@@ -19,19 +19,37 @@ const Landingpage = () => {
     <div className="">
       <Navigationbar />
 
-      <div className="mt-10 text-center  mx-auto  gap-2 text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-extrabold">
+      {/* <div className="mt-10 text-center  mx-auto  gap-2 text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-extrabold">
         <span className="text-slate-800">DO IT</span>
         <span className="text-cyan-500"> RIGHT</span>
-      </div>
+      </div> */}
 
       <div className=" mt-5 mb-2 relative  rounded-lg shadow-lg overflow-hidden h-auto ml-5 mr-5">
         <div className="relative w-full ">
-          <img
+          {/* <img
             src="../asset/image 14.png"
             alt="Nike Air Max"
             className="w-full  h-full object-cover "
-          />
-          <div className="absolute top-5 left-5    flex justify-center items-center mt-5 mx-5">
+          /> */}
+          {/* /add this vidoe as vackground intsead of iamge */}
+          {/* https://cdn.shopify.com/videos/c/o/v/7717de1c3a604964bd93f8619ce90a1b.mp4 */}
+         <Link to="/listingpage"> 
+
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className=" w-full h-full object-cover"
+          >
+            <source
+              src="https://cdn.shopify.com/videos/c/o/v/7717de1c3a604964bd93f8619ce90a1b.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+         </Link>
+          {/* <div className="absolute top-5 left-5    flex justify-center items-center mt-5 mx-5">
             <div className="bg-stone-900 text-white text-sxl font-semibold inline-flex object-cover sm:h-10 md:h-14 lg:h-auto sm:w-20 md:w-32 lg:w-auto px-4 py-2 rounded-xl shadow-lg overflow-hidden ">
               <span>product of the month</span>
             </div>
@@ -44,10 +62,10 @@ const Landingpage = () => {
               Nike introducing the new air max for
               <br /> everyone's comfort
             </p>
-          </div>
-          <Button className=" absolute bottom-10 left-10 mt-5 bg-[#4A69E2] px-10 py-4 sm:h-10 md:h-14 lg:h-auto  sm:w-10 md:w-14 lg:w-auto text-xl font-medium ">
+          </div> */}
+          {/* <Button className=" absolute bottom-10 left-10 mt-5 bg-[#f4f4f5] px-10 py-4 sm:h-10 md:h-14 lg:h-auto  sm:w-10 md:w-14 lg:w-auto text-xl font-medium ">
             buy now
-          </Button>
+          </Button> */}
         </div>
       </div>
       {/* new drops section */}
