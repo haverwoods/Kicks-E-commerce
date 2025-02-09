@@ -17,7 +17,9 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
+// Dashboard component that displays an area chart with sales data
 const Dashboard = () => {
+     // Data for the chart (monthly sales of shoes and t-shirts)
   const chartData = [
     { month: "January", shoe: 186, tshirt: 80 },
     { month: "February", shoe: 305, tshirt: 200 },
@@ -33,6 +35,7 @@ const Dashboard = () => {
     { month: "December", shoe: 310, tshirt: 220 },
   ];
 
+   // Configuration for chart colors and labels
   const chartConfig = {
     shoe: {
       label: "Shoe",
@@ -46,6 +49,7 @@ const Dashboard = () => {
 
   return (
     <div>
+         {/* Header Section */}
       <div>
         <h1 className="text-4xl font-bold text-center">Admin Dashboard</h1>
         <Button className="mx-auto block">Add user</Button>
@@ -53,15 +57,17 @@ const Dashboard = () => {
 
       <div className=" mx-auto h-full max-w-4xl">
         <Card>
+             {/* Card Header with title and description */}
           <CardHeader>
             <CardTitle>Area Chart - Stacked</CardTitle>
             <CardDescription>
               Showing total visitors for the last 6 months
             </CardDescription>
           </CardHeader>
+            {/* Card Content - Area Chart Display */}
           <CardContent>
             <ChartContainer config={chartConfig}>
-                // Area chart for the shoe and tshirt data points 
+                {/* // Area chart for the shoe and tshirt data points  */}
               <AreaChart
                 data={chartData}
                 margin={{
@@ -69,20 +75,21 @@ const Dashboard = () => {
                   right: 12,
                 }}
               >
+                  {/* Grid lines for better readability */}
                 <CartesianGrid vertical={false} />
-                {/* // XAxis for the month */}
+              {/* X-Axis displaying months (shortened to 3 letters) */}
                 <XAxis
                   dataKey="month"
                   tickLine={false}
                   axisLine={false}
-                  tickFormatter={(value) => value.slice(0, 3)} //slice the month to show only first 3 characters
+                  tickFormatter={(value) => value.slice(0, 3)} //show only first 3 characters
                 />
-                {/* // Tooltip for the chart data points with custom content */}
+                                {/* Tooltip for displaying data points on hover */}
                 <ChartTooltip
                   cursor={false}
                   content={<ChartTooltipContent indicator="dot" />}
                 />
-                {/* // Area for the shoe and tshirt data points with custom color */}
+                            {/* Area for T-Shirt sales (blue) */}
                 <Area
                   dataKey="tshirt"
                   type="monotone"
@@ -91,6 +98,7 @@ const Dashboard = () => {
                   stroke={chartConfig.tshirt.color}
                   stackId="a"
                 />
+                 {/* Area for Shoe sales (red-pink) */}
                 <Area
                   dataKey="shoe"
                   type="monotone"
