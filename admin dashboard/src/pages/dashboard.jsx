@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { TrendingUp } from "lucide-react";
+import { ShoppingBag, ShoppingCart, TrendingUp, Truck } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 import { motion } from "framer-motion";
 import {
@@ -55,22 +55,34 @@ const Dashboard = () => {
         <h1 className="text-4xl font-bold text-center">Admin Dashboard</h1>
         {/* <Button className="mx-auto block">Add user</Button> */}
       </div>
-      
-      <motion.div
-        className=" mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8"
-       
-      >
+
+      <motion.div className=" mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8">
         <StatCard
-          name="Total Users"
+          name="Total order"
           value="1,200"
           icon={TrendingUp}
-          color="#ff6384"
+          icon2={ShoppingBag}
+          color2="#0000"
+          color="#ffffff"
+          bgcolor="#4A69E2"
         />
         <StatCard
-          name="Total Sales"
+          name="active order"
           value="$12,000"
           icon={TrendingUp}
-          color="#36a2eb"
+          icon2={ShoppingCart}
+          color="#ffffff"
+          color2="#0000"
+          bgcolor="#4A69E2"
+        />
+        <StatCard
+          name="shipping order"
+          value="$12,000"
+          icon2={Truck}
+          icon={TrendingUp}
+          color="#ffffff"
+          color2="#0000"
+          bgcolor="#4A69E2"
         />
       </motion.div>
 
