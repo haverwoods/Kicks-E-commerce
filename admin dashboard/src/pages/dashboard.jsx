@@ -17,6 +17,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import StatCard from "@/component/statscard";
+import Order from "@/component/table/order";
 
 // Dashboard component that displays an area chart with sales data
 const Dashboard = () => {
@@ -156,6 +157,9 @@ const Dashboard = () => {
             </div>
           </CardFooter>
         </Card>
+        {/* // Table for displaying recent orders */}
+        <Order />
+       
       </div>
     </div>
   );
